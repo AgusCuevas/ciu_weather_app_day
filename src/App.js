@@ -10,7 +10,7 @@ function App() {
   const consultarAPI = async () => {
     try{
       const api = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=-34.5708&lon=-58.6243&exclude=current,hourly&appid=${key}`);
-      const ciudades = await api.json();
+      const ciudad = await api.json();
       setCiudad(ciudad.result);
       } catch (error) {
         console.log(error);
